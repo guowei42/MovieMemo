@@ -4,11 +4,11 @@ import { omdbApi } from "../omdb";
 const omdbMovie = omdbApi.injectEndpoints({
     endpoints: (builder) => ({
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        getMovie: builder.query<MovieOrShow, void>({
-            query: () => {
+        getMovieByImdbId: builder.query<MovieOrShow, string>({
+            query: (id) => {
                 console.log("API CALL");
                 //return `apikey=${import.meta.env.VITE_OMDB_KEY}&i=tt3896198`
-                return "imdbID=tt3896198";
+                return `imdbID=${id}`;
             },
             transformResponse: (baseQueryReturnValue: MovieOrShow[]) => {
                 return baseQueryReturnValue[0];
@@ -17,4 +17,4 @@ const omdbMovie = omdbApi.injectEndpoints({
     }),
 });
 
-export const { useGetMovieQuery } = omdbMovie;
+export const { useLazyGetMovieByImdbIdQuery } = omdbMovie;
