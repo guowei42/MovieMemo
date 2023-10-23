@@ -5,7 +5,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const omdbApi = createApi({
     reducerPath: "omdb",
     baseQuery: fetchBaseQuery({
-        baseUrl: `http://www.omdbapi.com/?apikey=${import.meta.env.omdb_key}`,
+        //baseUrl: `http://www.omdbapi.com/?`,
+        baseUrl: "http://localhost:3000/movie?"
     }),
     endpoints: () => ({}),
 });
