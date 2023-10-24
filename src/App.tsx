@@ -1,20 +1,24 @@
 import SearchIcon from "@mui/icons-material/Search";
 import {
     Box,
+    Button,
     Card,
+    CardActions,
     CardContent,
-    Divider,
+    CardHeader,
+    CardMedia,
     Grid,
     IconButton,
     InputBase,
     Paper,
+    Typography,
 } from "@mui/material";
 import React from "react";
 import { useLazyGetMovieByImdbIdQuery } from "./services/endpoints/movie";
+import UserProfile from "./components/UserProfile";
 
 function App() {
-    const [trigger, { data, isLoading, isSuccess }] =
-        useLazyGetMovieByImdbIdQuery();
+    const [trigger, { data, isSuccess }] = useLazyGetMovieByImdbIdQuery();
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -43,26 +47,32 @@ function App() {
                     <SearchIcon />
                 </IconButton>
             </Paper>
-            {!isLoading && isSuccess && (
+            {isSuccess && data &&(
                 <Card sx={{ border: "1px solid red", flex: 1 }}>
                     <Grid container>
-                        <Grid item xs={3}>
-                            <CardContent>
-                                <Box component="img" src={data?.Poster} />
-                            </CardContent>
+                        <Grid item xs={2}>
+                            <CardMedia
+                                component="img"
+                                image={data.Poster}
+                                aria-label="movie poster"
+                            />
                         </Grid>
-                        <Divider orientation="vertical" flexItem />
-                        <Grid item xs={8}>
+                        <Grid item xs={10}>
+                            <CardHeader title={data.Title}/>
                             <CardContent>
-                                <Grid container>
-                                    <div>{data?.Title}</div>
-                                    <div>{data?.Plot}</div>
-                                </Grid>
+                                <Typography variant="body2" color="text.secondary">{data.Plot}</Typography>
                             </CardContent>
+                            <CardActions disableSpacing>
+                                <Box component="footer">
+                                    <Button>+ WatchList</Button>
+                                    <Button>+ History</Button>
+                                </Box>
+                            </CardActions>
                         </Grid>
                     </Grid>
                 </Card>
             )}
+            <UserProfile />
         </>
     );
 }

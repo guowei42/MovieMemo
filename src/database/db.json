@@ -40,5 +40,18 @@
             "Website": "N/A",
             "Response": "True"
         }
+    ],
+    "users": [
+        {
+            "id": "49791d87-ef0a-4604-92fa-987c51c1d83b",
+            "name": "John Smith"
+        }
+    ],
+    "MovieUser": [
+        {
+            "id": "1",
+            "userId": "49791d87-ef0a-4604-92fa-987c51c1d83b",
+            ""
+        }
     ]
 }
