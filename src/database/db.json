@@ -1,5 +1,5 @@
 {
-    "movie": [
+    "movies": [
         {
             "Title": "Guardians of the Galaxy Vol. 2",
             "Year": "2017",
@@ -10,7 +10,7 @@
             "Director": "James Gunn",
             "Writer": "James Gunn, Dan Abnett, Andy Lanning",
             "Actors": "Chris Pratt, Zoe Saldana, Dave Bautista",
-            "Plot": "The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father, the ambitious celestial being Ego.",
+            "Plot": "After saving Xandar from Ronan's wrath, the Guardians are now recognized as heroes. Now the team must help their leader Star Lord (Chris Pratt) uncover the truth behind his true heritage. Along the way, old foes turn to allies and betrayal is blooming. And the Guardians find that they are up against a devastating new menace who is out to rule the galaxy.",
             "Language": "English",
             "Country": "United States",
             "Awards": "Nominated for 1 Oscar. 15 wins & 60 nominations total",
@@ -39,19 +39,62 @@
             "Production": "N/A",
             "Website": "N/A",
             "Response": "True"
+        },
+        {
+            "Title": "Incantation",
+            "Year": "2022",
+            "Rated": "TV-MA",
+            "Released": "08 Jul 2022",
+            "Runtime": "110 min",
+            "Genre": "Horror, Mystery",
+            "Director": "Kevin Ko",
+            "Writer": "Che-Wei Chang, Kevin Ko",
+            "Actors": "Hsuan-yen Tsai, Sin-Ting Huang, Ying-Hsuan Kao",
+            "Plot": "Six years ago, Li Ronan was cursed after breaking a religious taboo. Now, she must protect her daughter from the consequences of her actions.",
+            "Language": "Mandarin",
+            "Country": "Taiwan",
+            "Awards": "4 wins & 13 nominations",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYjUxZGI1ODQtMDljMS00ZTUwLWI0NTMtYjc2YmUyZTM3YTdhXkEyXkFqcGdeQXVyNTM2NTY4NzU@._V1_SX300.jpg",
+            "Ratings": [
+                {
+                    "Source": "Internet Movie Database",
+                    "Value": "6.2/10"
+                },
+                {
+                    "Source": "Rotten Tomatoes",
+                    "Value": "75%"
+                }
+            ],
+            "Metascore": "N/A",
+            "imdbRating": "6.2",
+            "imdbVotes": "18,469",
+            "imdbID": "tt18968540",
+            "Type": "movie",
+            "DVD": "08 Jul 2022",
+            "BoxOffice": "N/A",
+            "Production": "N/A",
+            "Website": "N/A",
+            "Response": "True"
         }
     ],
     "users": [
         {
             "id": "49791d87-ef0a-4604-92fa-987c51c1d83b",
-            "name": "John Smith"
-        }
-    ],
-    "MovieUser": [
+            "name": "John Smith",
+            "watched": ["tt18968540"],
+            "watchlist": ["tt3896198"]
+        },
         {
-            "id": "1",
-            "userId": "49791d87-ef0a-4604-92fa-987c51c1d83b",
-            ""
+            "id": "5ffc7f6e-f408-46ab-b4f0-2127f76c4729",
+            "name": "Mary Jane",
+            "watched": ["tt3896198"],
+            "watchlist": ["tt18968540"]
+        },
+        {
+            "id": "40828786-f0ff-463b-a092-2e13bfd4dbb3",
+            "name": "Mary Jane",
+            "watched": null,
+            "watchlist": null
         }
     ]
 }

@@ -8,7 +8,7 @@ const omdbMovie = omdbApi.injectEndpoints({
             query: (id) => {
                 console.log("API CALL");
                 //return `apikey=${import.meta.env.VITE_OMDB_KEY}&i=tt3896198`
-                return `imdbID=${id}`;
+                return `movies?imdbID=${id}`;
             },
             transformResponse: (baseQueryReturnValue: MovieOrShow[]) => {
                 return baseQueryReturnValue[0];

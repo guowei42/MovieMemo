@@ -6,7 +6,7 @@ export const omdbApi = createApi({
     reducerPath: "omdb",
     baseQuery: fetchBaseQuery({
         //baseUrl: `http://www.omdbapi.com/?`,
-        baseUrl: "http://localhost:3000/movie?"
+        baseUrl: "http://localhost:3000/"
     }),
     endpoints: () => ({}),
 });
